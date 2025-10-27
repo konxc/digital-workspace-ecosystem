@@ -1,0 +1,79 @@
+/**
+ * Custom Components: Digital Workspace Ecosystem
+ * 
+ * Custom CSS untuk komponen yang TIDAK ada di Tailwind utility classes
+ * Prinsip: Utility-first, custom only when needed
+ * 
+ * Last Updated: 2025-10-27
+ */
+
+/* ========================================
+   CUSTOM CARD VARIANTS
+   (Tailwind tidak punya card-gov, card-highlight)
+   ======================================== */
+
+.card-highlight {
+  background: linear-gradient(to bottom right, #eef2ff, #dbeafe);
+  border: 2px solid #a5b4fc;
+}
+
+.card-gov {
+  background: linear-gradient(to bottom right, #d1fae5, #a7f3d0);
+  border: 1px solid #86efac;
+}
+
+/* ========================================
+   CUSTOM BADGE VARIANTS
+   (Tailwind tidak punya badge-gov, badge-new)
+   ======================================== */
+
+.badge-new {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-gov {
+  background: linear-gradient(to right, #d1fae5, #a7f3d0);
+  color: #047857;
+}
+
+/* ========================================
+   CUSTOM GRADIENTS
+   (Tailwind linear-to-br is enough, tapi ini custom variant)
+   ======================================== */
+
+.gradient-indigo {
+  background: linear-gradient(to bottom right, #eef2ff, white, #dbeafe);
+}
+
+.gradient-gov {
+  background: linear-gradient(to right, #d1fae5, #a7f3d0);
+}
+
+/* ========================================
+   CUSTOM ANIMATIONS ONLY
+   (use animate-* classes dari animations.css)
+   ======================================== */
+
+/* Animations are in animations.css */
+
+/* ========================================
+   ACCESSIBILITY UTILITIES
+   (use focus-ring, sr-only from accessibility.css)
+   ======================================== */
+
+/* Accessibility is in accessibility.css */
+
+/* ========================================
+   USAGE GUIDE
+   
+   Gunakan Tailwind classes untuk yang ada:
+   - bg-white, rounded-xl, border, p-6 (bukan .card)
+   - inline-flex, items-center, gap-2 (bukan .badge)
+   - px-6 py-3 rounded-lg (bukan .btn)
+   
+   Gunakan custom classes hanya untuk variant khusus:
+   - .card-highlight (gradient khusus)
+   - .card-gov (government theme)
+   - .badge-gov (government badge)
+   ======================================== */
