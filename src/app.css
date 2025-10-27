@@ -1,3 +1,33 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+
+/* ========================================
+   DESIGN SYSTEM MODULES
+   Digital Workspace Ecosystem
+   ======================================== */
+
+@import './design-system/tokens.css';
+@import './design-system/components.css';
+@import './design-system/animations.css';
+@import './design-system/accessibility.css';
+
+/* ========================================
+   TOC HIGHLIGHT ANIMATION
+   ======================================== */
+
+.toc-highlight {
+	animation: highlightPulse 1s ease-in-out;
+}
+
+@keyframes highlightPulse {
+	0% {
+		background-color: rgba(99, 102, 241, 0.2); /* indigo-400 at 20% - softer */
+	}
+	50% {
+		background-color: rgba(99, 102, 241, 0.35); /* indigo-400 at 35% - softer */
+	}
+	100% {
+		background-color: transparent;
+	}
+}

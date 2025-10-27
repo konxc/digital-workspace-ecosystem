@@ -1,0 +1,19 @@
+name = "crm-konxc-space"
+compatibility_date = "2025-10-27"
+pages_build_output_dir = ".svelte-kit/cloudflare"
+
+[site]
+bucket = ".svelte-kit/cloudflare"
+
+# Environment variables (use wrangler secret for sensitive data)
+# [vars]
+# NODE_ENV = "production"
+
+# Production environment
+[env.production.vars]
+NODE_ENV = "production"
+
+# Preview/staging environment  
+[env.preview.vars]
+NODE_ENV = "preview"
+
