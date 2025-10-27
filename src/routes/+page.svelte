@@ -9,11 +9,11 @@
 
 <svelte:head>
 	<title>Digital Workspace Ecosystem - Platform Manajemen Operasional Open Source</title>
-	<meta name="description" content="Platform manajemen HR dan operasional bisnis yang akuntable, self-hosted, dan modular" />
+	<meta name="description" content="Platform manajemen operasional yang akuntable, berdaulat, dan transparan untuk bisnis dan pemerintahan. Self-hosted dengan REST API integration." />
 </svelte:head>
 
 <!-- Hero Section -->
-<section class="min-h-screen flex items-center justify-center bg-linear-to-br from-indigo-50 via-white to-blue-50">
+<section class="min-h-screen flex items-center justify-center bg-linear-to-br from-indigo-50 via-white to-blue-50 pt-24 lg:pt-28">
 	<div class="container mx-auto px-6 py-12">
 		<div class="text-center space-y-8 animate-fade-in">
 			<div class="space-y-4">
@@ -23,10 +23,10 @@
 					<span class="text-gray-700">Ecosystem</span>
 				</h1>
 				<p class="text-2xl text-gray-600 max-w-3xl mx-auto">
-					Platform manajemen operasional yang modern dan fleksibel
+					Platform manajemen operasional yang akuntable, berdaulat, dan transparan
 				</p>
-				<p class="text-lg text-gray-500 max-w-2xl mx-auto">
-					Kelola SDM, operasional bisnis, dan analitik dalam satu ekosistem yang transparan dan terintegrasi
+				<p class="text-lg text-gray-500 max-w-3xl mx-auto">
+					Untuk organisasi bisnis dan pemerintahan dari tingkat desa hingga nasional. Dilengkapi REST API untuk integrasi dan keterbukaan penuh
 				</p>
 			</div>
 
@@ -274,6 +274,112 @@
 							<h3 class="font-bold text-gray-900">Open Source Core</h3>
 							<p class="text-gray-600">Transparansi kode, community-driven development</p>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Government Use Case Section -->
+<section class="py-24 bg-white border-y border-gray-200">
+	<div class="container mx-auto px-6">
+		<div class="max-w-6xl mx-auto">
+			<div class="text-center mb-16">
+				<div class="inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-green-100 to-emerald-100 text-green-700 rounded-full text-sm font-semibold mb-6">
+					<span class="text-2xl">🏛️</span>
+					<span>Platform untuk Pemerintahan</span>
+				</div>
+				<h2 class="text-4xl font-bold text-gray-900 mb-4">Tidak Hanya untuk Perusahaan</h2>
+				<p class="text-xl text-gray-600 max-w-3xl mx-auto">
+					Platform ini dirancang untuk mendukung tata kelola yang lebih akuntable, berdaulat, dan transparan bagi pemerintahan dari tingkat desa hingga nasional
+				</p>
+			</div>
+
+			<div class="grid md:grid-cols-3 gap-8 mb-12">
+				<div class="bg-linear-to-br from-green-50 to-emerald-50 p-6 rounded-xl border border-green-200">
+					<div class="text-3xl mb-4">🏘️</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">Tingkat Desa</h3>
+					<p class="text-sm text-gray-600">
+						Perangkat desa dapat mengelola operasional, SDM, dan pelaporan dengan platform yang transparan dan akuntable
+					</p>
+				</div>
+
+				<div class="bg-linear-to-br from-blue-50 to-cyan-50 p-6 rounded-xl border border-blue-200">
+					<div class="text-3xl mb-4">🏢</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">Tingkat Daerah</h3>
+					<p class="text-sm text-gray-600">
+						Pemerintahan daerah dapat mengelola integrasi data, vendor management, dan analitik kebijakan publik
+					</p>
+				</div>
+
+				<div class="bg-linear-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-200">
+					<div class="text-3xl mb-4">🇮🇩</div>
+					<h3 class="text-xl font-bold text-gray-900 mb-2">Tingkat Nasional</h3>
+					<p class="text-sm text-gray-600">
+						Integrasi tingkat nasional dengan REST API yang dapat diolah oleh berbagai pihak terkait untuk transparansi penuh
+					</p>
+				</div>
+			</div>
+
+			<!-- Key Benefits for Government -->
+			<div class="bg-white border-2 border-gray-200 rounded-2xl p-8">
+				<h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Prinsip Penting untuk Pemerintahan</h3>
+				<div class="grid md:grid-cols-2 gap-6">
+					<div class="flex items-start gap-4 p-4 bg-blue-50 rounded-lg">
+						<span class="text-2xl">✅</span>
+						<div>
+							<h4 class="font-bold text-gray-900">Akuntabilitas</h4>
+							<p class="text-sm text-gray-600">Setiap operasi tercatat dengan audit trail lengkap dan terbuka</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-4 p-4 bg-green-50 rounded-lg">
+						<span class="text-2xl">🛡️</span>
+						<div>
+							<h4 class="font-bold text-gray-900">Kedaulatan Data</h4>
+							<p class="text-sm text-gray-600">Data tetap berada di kontrol institusi pemerintahan</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-4 p-4 bg-purple-50 rounded-lg">
+						<span class="text-2xl">🔍</span>
+						<div>
+							<h4 class="font-bold text-gray-900">Transparansi</h4>
+							<p class="text-sm text-gray-600">Public transparency tools untuk keterbukaan informasi publik</p>
+						</div>
+					</div>
+					<div class="flex items-start gap-4 p-4 bg-yellow-50 rounded-lg">
+						<span class="text-2xl">🗳️</span>
+						<div>
+							<h4 class="font-bold text-gray-900">Demokratis</h4>
+							<p class="text-sm text-gray-600">Platform mendukung partisipasi dan governance yang demokratis</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- REST API Integration -->
+			<div class="mt-12 bg-linear-to-r from-indigo-50 to-purple-50 p-8 rounded-2xl border-2 border-indigo-200">
+				<div class="flex items-start gap-6">
+					<div class="text-4xl">🔌</div>
+					<div class="flex-1">
+						<h3 class="text-2xl font-bold text-gray-900 mb-3">REST API Integration</h3>
+						<p class="text-gray-700 mb-4">
+							Platform menyediakan REST API yang lengkap untuk integrasi dengan berbagai sistem pemerintahan dan pihak terkait
+						</p>
+						<ul class="space-y-2 text-sm text-gray-700">
+							<li class="flex items-center gap-2">
+								<span class="text-green-600">✓</span>
+								<span>Data dapat diolah oleh masing-masing pihak terkait</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<span class="text-green-600">✓</span>
+								<span>Integrasi dengan sistem existing pemerintahan</span>
+							</li>
+							<li class="flex items-center gap-2">
+								<span class="text-green-600">✓</span>
+								<span>Standardized API untuk konsistensi data</span>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

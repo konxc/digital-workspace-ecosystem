@@ -287,7 +287,7 @@
 				<div>
 					<h3 class="text-xl font-bold text-gray-900 mb-3">3. Introduce Yourself</h3>
 					<p class="text-gray-700">
-						Perkenalkan diri di <a href="#" class="text-indigo-600 hover:underline">GitHub Discussions</a> atau <a href="#" class="text-indigo-600 hover:underline">Discord</a>
+						Perkenalkan diri di platform komunitas (GitHub Discussions atau Discord - coming soon)
 					</p>
 				</div>
 

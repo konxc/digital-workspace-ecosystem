@@ -86,9 +86,11 @@
 
 			<div class="grid md:grid-cols-2 gap-8 mb-12">
 				<!-- Open Source Model -->
-				<div class="bg-linear-to-br from-indigo-50 to-blue-50 p-8 rounded-xl border-2 border-indigo-300">
+				<div class="bg-linear-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 shadow-sm">
 					<div class="flex items-center gap-3 mb-6">
-						<div class="text-4xl">🔓</div>
+						<div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center text-2xl">
+							🔓
+						</div>
 						<div>
 							<h3 class="text-2xl font-bold text-gray-900">Open Source</h3>
 							<p class="text-sm text-gray-600">Self-Hosted</p>
@@ -120,9 +122,11 @@
 				</div>
 
 				<!-- Managed Hub Model -->
-				<div class="bg-linear-to-br from-purple-50 to-pink-50 p-8 rounded-xl border-2 border-purple-300">
+				<div class="bg-linear-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200 shadow-sm">
 					<div class="flex items-center gap-3 mb-6">
-						<div class="text-4xl">🌐</div>
+						<div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center text-2xl">
+							🌐
+						</div>
 						<div>
 							<h3 class="text-2xl font-bold text-gray-900">Managed Hub</h3>
 							<p class="text-sm text-gray-600">Marketplace & Network</p>
@@ -260,21 +264,21 @@
 				</div>
 
 				<div class="grid md:grid-cols-2 gap-4">
-					<div class="p-6 bg-indigo-50 rounded-lg">
+					<div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
 						<p class="font-semibold text-gray-900 mb-2">Transparansi</p>
-						<p class="text-gray-700">Setiap proses dapat diaudit dan diverifikasi</p>
+						<p class="text-gray-600">Setiap proses dapat diaudit dan diverifikasi</p>
 					</div>
-					<div class="p-6 bg-blue-50 rounded-lg">
+					<div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
 						<p class="font-semibold text-gray-900 mb-2">Fleksibilitas</p>
-						<p class="text-gray-700">Modular dan dapat disesuaikan dengan kebutuhan</p>
+						<p class="text-gray-600">Modular dan dapat disesuaikan dengan kebutuhan</p>
 					</div>
-					<div class="p-6 bg-purple-50 rounded-lg">
+					<div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
 						<p class="font-semibold text-gray-900 mb-2">Komunitas</p>
-						<p class="text-gray-700">Berkembang bersama melalui kolaborasi</p>
+						<p class="text-gray-600">Berkembang bersama melalui kolaborasi</p>
 					</div>
-					<div class="p-6 bg-green-50 rounded-lg">
+					<div class="p-6 bg-gray-50 rounded-xl border border-gray-200">
 						<p class="font-semibold text-gray-900 mb-2">Kemandirian</p>
-						<p class="text-gray-700">Self-hosted untuk kontrol data penuh</p>
+						<p class="text-gray-600">Self-hosted untuk kontrol data penuh</p>
 					</div>
 				</div>
 			</div>

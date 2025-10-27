@@ -31,12 +31,12 @@
 			<!-- 2025 -->
 			<div class="mb-12">
 				<div class="flex items-center gap-4 mb-6">
-					<h3 class="text-2xl font-bold text-indigo-600">2025 - Foundation Year</h3>
-					<span class="text-sm px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">Q1-Q4</span>
+					<h3 class="text-2xl font-bold text-gray-900">2025 - Foundation Year</h3>
+					<span class="text-sm px-3 py-1 bg-gray-100 text-gray-700 rounded-full border border-gray-200">Q1-Q4</span>
 				</div>
 
-				<div class="border-l-4 border-indigo-600 pl-6 space-y-6">
-					<div class="bg-indigo-50 p-6 rounded-lg">
+				<div class="border-l-2 border-gray-200 pl-6 space-y-6">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">Q1: MVP Development</h4>
 						<ul class="space-y-1 text-gray-700 text-sm">
 							<li>✓ Database schema design</li>
@@ -46,7 +46,7 @@
 						</ul>
 					</div>
 
-					<div class="bg-blue-50 p-6 rounded-lg">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">Q2: Internal Optimization</h4>
 						<ul class="space-y-1 text-gray-700 text-sm">
 							<li>✓ 100% Excel replacement</li>
@@ -56,7 +56,7 @@
 						</ul>
 					</div>
 
-					<div class="bg-purple-50 p-6 rounded-lg">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">Q3: Community Preparation</h4>
 						<ul class="space-y-1 text-gray-700 text-sm">
 							<li>✓ Code cleanup & documentation</li>
@@ -66,7 +66,7 @@
 						</ul>
 					</div>
 
-					<div class="bg-green-50 p-6 rounded-lg">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">Q4: Beta Launch</h4>
 						<ul class="space-y-1 text-gray-700 text-sm">
 							<li>✓ Open source release</li>
@@ -81,12 +81,12 @@
 			<!-- 2026 -->
 			<div class="mb-12">
 				<div class="flex items-center gap-4 mb-6">
-					<h3 class="text-2xl font-bold text-indigo-600">2026 - Growth Year</h3>
-					<span class="text-sm px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">H1-H2</span>
+					<h3 class="text-2xl font-bold text-gray-900">2026 - Growth Year</h3>
+					<span class="text-sm px-3 py-1 bg-gray-100 text-gray-700 rounded-full border border-gray-200">H1-H2</span>
 				</div>
 
-				<div class="border-l-4 border-indigo-600 pl-6 space-y-6">
-					<div class="bg-yellow-50 p-6 rounded-lg">
+				<div class="border-l-2 border-gray-200 pl-6 space-y-6">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">Marketplace Beta</h4>
 						<ul class="space-y-1 text-gray-700 text-sm">
 							<li>✓ Vendor database launched</li>
@@ -96,7 +96,7 @@
 						</ul>
 					</div>
 
-					<div class="bg-orange-50 p-6 rounded-lg">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">Transparency Dashboard</h4>
 						<ul class="space-y-1 text-gray-700 text-sm">
 							<li>✓ Public dashboard launched</li>
@@ -111,24 +111,24 @@
 			<!-- 2027-2030 -->
 			<div class="mb-12">
 				<div class="flex items-center gap-4 mb-6">
-					<h3 class="text-2xl font-bold text-indigo-600">2027-2030 - Impact & Maturity</h3>
-					<span class="text-sm px-3 py-1 bg-indigo-100 text-indigo-700 rounded-full">Year 3-6</span>
+					<h3 class="text-2xl font-bold text-gray-900">2027-2030 - Impact & Maturity</h3>
+					<span class="text-sm px-3 py-1 bg-gray-100 text-gray-700 rounded-full border border-gray-200">Year 3-6</span>
 				</div>
 
 				<div class="grid md:grid-cols-2 gap-4">
-					<div class="bg-indigo-50 p-6 rounded-lg">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">2027</h4>
 						<p class="text-sm text-gray-700">National recognition as transparency platform</p>
 					</div>
-					<div class="bg-blue-50 p-6 rounded-lg">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">2028</h4>
 						<p class="text-sm text-gray-700">Government pilot project adoption</p>
 					</div>
-					<div class="bg-purple-50 p-6 rounded-lg">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">2029</h4>
 						<p class="text-sm text-gray-700">Self-sustaining community ecosystem</p>
 					</div>
-					<div class="bg-green-50 p-6 rounded-lg">
+					<div class="bg-gray-50 p-6 rounded-xl border border-gray-100">
 						<h4 class="font-bold text-gray-900 mb-2">2030</h4>
 						<p class="text-sm text-gray-700">Established legacy untuk Indonesia</p>
 					</div>
@@ -173,7 +173,7 @@
 		<div class="max-w-4xl mx-auto">
 			<h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">🛠️ Pendekatan Pengembangan</h2>
 
-			<div class="bg-linear-to-br from-indigo-50 to-purple-50 p-8 rounded-xl border-l-4 border-indigo-600 mb-8">
+			<div class="bg-gray-50 p-8 rounded-2xl border border-gray-200 mb-8">
 				<p class="text-lg text-gray-700 mb-4 italic">
 					Platform yang dikembangkan dengan pendekatan iteratif dan berbasis feedback dari komunitas pengguna. 
 					Setiap fitur dirancang untuk memecahkan masalah nyata yang dihadapi organisasi modern.
@@ -181,16 +181,16 @@
 			</div>
 
 			<div class="grid md:grid-cols-3 gap-6">
-				<div class="bg-indigo-50 p-6 rounded-xl text-center">
-					<div class="text-3xl font-bold text-indigo-600 mb-2">Q4 2025</div>
+				<div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center">
+					<div class="text-3xl font-bold text-gray-900 mb-2">Q4 2025</div>
 					<p class="text-sm text-gray-600">Launch Beta</p>
 				</div>
-				<div class="bg-blue-50 p-6 rounded-xl text-center">
-					<div class="text-3xl font-bold text-blue-600 mb-2">2026-2027</div>
+				<div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center">
+					<div class="text-3xl font-bold text-gray-900 mb-2">2026-2027</div>
 					<p class="text-sm text-gray-600">Marketplace & Features</p>
 				</div>
-				<div class="bg-purple-50 p-6 rounded-xl text-center">
-					<div class="text-3xl font-bold text-purple-600 mb-2">2030+</div>
+				<div class="bg-gray-50 p-6 rounded-xl border border-gray-200 text-center">
+					<div class="text-3xl font-bold text-gray-900 mb-2">2030+</div>
 					<p class="text-sm text-gray-600">Mature Platform</p>
 				</div>
 			</div>
