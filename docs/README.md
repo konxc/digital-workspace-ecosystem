@@ -26,7 +26,8 @@ docs/
 │   │   ├── VISION_AND_MANIFESTO.md
 │   │   ├── TIMELINE_AND_COMMITMENT.md
 │   │   ├── BRAINSTORMING_SUMMARY.md
-│   │   └── BRAINSTORMING_SYNCHRONIZATION.md
+│   │   ├── BRAINSTORMING_SYNCHRONIZATION.md
+│   │   └── BRAINSTORMING_DIGITAL_WORKSPACE_OS.md  ← NEW: AI-powered OS vision
 │   ├── business/                    # Business Strategy
 │   │   ├── BUSINESS_STRATEGY.md
 │   │   ├── COMPETITIVE_ANALYSIS.md
@@ -195,6 +196,7 @@ Documents lama yang masih relevan sebagai reference.
 docs/strategy/vision/VISION_AND_MANIFESTO.md
 docs/strategy/vision/TIMELINE_AND_COMMITMENT.md
 docs/strategy/vision/BRAINSTORMING_SUMMARY.md
+docs/strategy/vision/BRAINSTORMING_DIGITAL_WORKSPACE_OS.md
 ```
 
 **Business Strategy**
