@@ -2496,7 +2496,7 @@ Knowledge:
 
 ---
 
-## 16.-appendix A: Glossary
+## 16. Appendix A: Glossary
 
 ```
 ABAC: Attribute-Based Access Control
@@ -2523,7 +2523,7 @@ UVP: Unique Value Proposition
 
 ---
 
-## 16. Appendix A: Original Prompt Brainstorming
+## 17. Appendix B: Original Prompt Brainstorming
 
 > Prompt asli yang memicu brainstorming ini. Dicatat sebagai referensi agar konteks awal tidak hilang.
 
@@ -2566,7 +2566,7 @@ bagaimana menurutmu? mari kita diskusikan.
 
 ---
 
-## 17. Appendix B: Pernyataan Penutup
+## 18. Appendix C: Pernyataan Penutup
 
 > Pernyataan visi ini ditulis setelah brainstorming selesai — sebagai komitmen dan pengingat.
 
@@ -2592,7 +2592,7 @@ saya ingin ini bisa menjadi sebuah realisasi nyata.
 
 ---
 
-## 18. Appendix C: Reference Documents
+## 19. Appendix D: Reference Documents
 
 ```
 Internal References:
