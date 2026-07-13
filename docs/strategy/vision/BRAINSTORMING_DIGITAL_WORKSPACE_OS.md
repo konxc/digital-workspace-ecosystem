@@ -5,7 +5,7 @@
 **Session Date:** Juli 2026
 **Author:** Sandikodev (KonXC) with AI Assistant
 **Status:** Living Document — terus di-update seiring kedalaman pemahaman
-**Version:** 1.0.0
+**Version:** 1.1.0
 
 ---
 
@@ -22,6 +22,7 @@ Dokumen ini disusun sedetail mungkin agar bisa dibaca kapan saja, direview kapan
 - Setiap section bisa dijadikan acuan mandiri untuk implementasi
 - Tidak ada informasi yang dihilangkan — semua dicatat lengkap
 - Setiap konsep dilengkapi dengan contoh konkret
+- Prompt original brainstorming disertakan sebagai Appendix untuk referensi
 
 ---
 
@@ -31,17 +32,25 @@ Dokumen ini disusun sedetail mungkin agar bisa dibaca kapan saja, direview kapan
 
 Dalam paradigm konvensional, AI adalah **tool** — sesuatu yang dipanggil ketika dibutuhkan, lalu dimatikan. Dalam paradigm Koneksi OS, AI adalah **rekan kerja** — sebuah entitas yang selalu hadir, selalu memahami konteks, dan selalu siap membantu.
 
-**Perbedaan Fundamental:**
+**Inspirasi: Computer-Use Agent (Manus, Codex, dsb)**
 
-| Aspek | Paradigma Lama (AI sebagai Tool) | Paradigma Baru (AI sebagai Rekan Kerja) |
-|---|---|---|
-| **Kapan aktif** | Saat dipanggil | Selalu aktif, standby |
-| **Konteks** | Per-session (lupa setelah selesai) | Persistent (ingat semua konteks) |
-| **Pemahaman** | General knowledge | Workspace-specific knowledge |
-| **Role awareness** | Tidak ada | Memahami role dan permission |
-| **Team awareness** | Tidak ada | Memahami tim, task, dan dynamics |
-| **SOP awareness** | Manual reference | Automatic SOP checking |
-| **Learning** | Per user | Per tim, terakumulasi |
+Konsep ini terinspirasi dari kemunculan "computer-use agents" seperti **Manus AI**, **OpenAI Codex**, dan sejenisnya — AI yang bisa **menggunakan komputer secara langsung** (bukan sekadar mengobrol). Tapi Koneksi OS melangkah lebih jauh: bukan AI yang mengontrol komputer kamu, melainkan AI yang **hidup di workspace kamu** — memahami konteks lengkap tim, organisasi, dan seluruh ekosistem digital yang kalian bangun.
+
+Perbedaan kritis:
+- **Manus/Codex:** AI yang bisa eksekusi tugas di komputer (browser automation, code execution)
+- **Koneksi OS:** AI yang **memahami seluruh konteks workspace** kamu — dari GitHub repo sampai sprint board, dari playbook sampai trust score — dan menggunakan pemahaman itu untuk membantu setiap anggota tim
+
+| Aspek | Paradigma Lama (AI sebagai Tool) | Computer-Use Agent (Manus/Codex) | Koneksi OS (AI sebagai Rekan Kerja) |
+|---|---|---|---|
+| **Kapan aktif** | Saat dipanggil | Saat dipanggil + bisa autonomous | Selalu aktif, standby |
+| **Konteks** | Per-session (lupa setelah selesai) | Per-session + browser context | Persistent (ingat semua konteks workspace) |
+| **Pemahaman** | General knowledge | Computer interaction | Workspace-specific knowledge |
+| **Role awareness** | Tidak ada | Tidak ada | Memahami role dan permission |
+| **Team awareness** | Tidak ada | Tidak ada | Memahami tim, task, dan dynamics |
+| **SOP awareness** | Manual reference | Tidak ada | Automatic SOP checking |
+| **Learning** | Per user | Per user | Per tim, terakumulasi |
+| **Eksekusi** | Bisa generate code | Bisa eksekusi langsung di komputer | Bisa generate code + orchestrate workflow |
+| **Scope** | Satu user | Satu user | Seluruh tim/organisasi |
 
 ### 1.2 The "Aha Moment"
 
@@ -96,6 +105,147 @@ src/lib/payment.ts baris 42."
 ```
 
 Ini bukan sekadar AI yang bisa baca file. Ini adalah AI yang **memahami konteks lengkap** — siapa kamu, apa yang kamu kerjakan, bagaimana timmu bekerja, dan apa aturan yang berlaku.
+
+### 1.3 Skenario: Diskusi Tim & Meeting
+
+```
+SCENARIO: Diskusi Tim tentang Integrasi Payment Gateway
+─────────────────────────────────────────────────────────────
+
+Sebelum meeting dimulai, OS sudah mempersiapkan:
+- Daftar pertanyaan yang mungkin muncul dari sprint kemarin
+- Data dari Trello: 2 issues terbuka terkait payment
+- Context dari playbook: ADR-003 tentang payment integration
+- Knowledge base: error patterns dari payment gateway lain
+
+Tim: Andi (BE), Budi (FE), Citra (QA), Dewi (PM)
+OS: "Mau saya siapkan topik diskusi hari ini?"
+
+Dewi (PM): "Ya, tolong susun agenda"
+OS: "Berdasarkan sprint board dan issues terbuka, 
+     topik yang relevan:
+     1. Midtrans webhook error handling (issue #23)
+     2. Payment reconciliation strategy (issue #27)
+     3. UAT timeline untuk payment flow
+     Saya sudah siapkan data dari masing-masing issue."
+
+Andi: "Untuk webhook, kemarin saya sudah implementasi 
+      retry mechanism"
+OS: "Benar, Andi. Commit terakhir: a3f8d2e 
+     'feat: add webhook retry mechanism'. 
+     Pattern yang dipakai sesuai SOP error-handling 
+     di playbook. Tapi ada concern: retry 3x dengan 
+     exponential backoff belum di-test untuk 
+     concurrent scenario."
+
+Budi: "Kalau dari sisi FE, saya butuh API spec 
+      yang final"
+OS: "API spec untuk payment sudah di-update di 
+     docs/api/payment.yaml. Perubahan terakhir: 
+     tambah field 'payment_method' di request body. 
+     Budi, kamu bisa mulai dari endpoint 
+     POST /api/donations/[id]/payment."
+
+Citra: "Saya mau mulai UAT. Ada test case yang 
+       perlu di-prioritas?"
+OS: "Berdasarkan risk assessment di playbook, 
+     prioritas UAT:
+     1. Happy path: donasi berhasil + webhook success
+     2. Error path: webhook timeout + retry
+     3. Edge case: duplicate payment
+     4. Security: invalid webhook signature
+     Total: 23 test cases yang sudah ter-dokumentasi"
+
+─────────────────────────────────────────────────────────────
+```
+
+### 1.4 Prinsip: Tidak Takut Out of the Track
+
+Yang paling penting dari Koneksi OS: **tim tidak takut untuk keluar jalur (out of the track)**.
+
+Dalam brainstorming atau diskusi, sering kali ide-ide baru muncul yang tidak terencana. Koneksi OS mendukung hal ini:
+- **Diskusi boleh melenceng** dari agenda — AI tetap fokus, mencatat ide-ide baru, dan menghubungkannya dengan konteks yang ada
+- **Tim tetap fokus** — karena AI mengingat semua konteks, mereka tidak perlu khawatir kehilangan thread diskusi
+- **Saling menguatkan argumen** — AI menyediakan data dan referensi dari playbook/codebase untuk mendukung setiap argumen
+- **Kritis tapi konstruktif** — AI bisa menunjukkan potensi masalah (berdasarkan knowledge base) tanpa menghambat kreativitas
+
+```
+SCENARIO: Brainstorming Feature Baru (Out of Track OK!)
+─────────────────────────────────────────────────────────────
+
+Dalam meeting, tiba-tiba Andi punya ide:
+"Bagaimana kalau donasi bisa pakai crypto?"
+
+Tim mulai diskusi crypto payment...
+(melenceng dari agenda awal: UAT payment flow)
+
+OS tetap aktif:
+1. Mencatat ide crypto payment
+2. Menghubungkan dengan konteks: "Saya lihat di 
+   playbook, ada ADR tentang payment methods. 
+   Crypto belum ada di list."
+3. Menyediakan data: "Berdasarkan knowledge base, 
+   3 yayasan lain sudah implementasi crypto donation. 
+   Challenge utama: volatilitas harga dan compliance."
+4. Mencatat action item: "Saya catat ide ini sebagai 
+   RFC-007. Deadline proposal: 2 minggu."
+5. Mengingatkan: "Untuk UAT payment flow yang asli, 
+   kita masih ada 3 test cases yang belum selesai. 
+   Mau saya reminder setelah crypto discussion selesai?"
+
+Hasil: Ide crypto tercatat, tetap fokus pada UAT, 
+tidak ada yang kehilangan konteks.
+
+─────────────────────────────────────────────────────────────
+```
+
+### 1.5 Skenario: Individual vs Organization
+
+Satu OS, dua mode penggunaan:
+
+```
+SCENARIO: Individual User (Personal Account)
+─────────────────────────────────────────────────────────────
+
+Andi adalah freelance developer yang punya:
+- Personal GitHub: andidev
+- Repos: andidev/playbook, andidev/andidev (profile), andidev/andidev.github.io
+
+Andi bisa:
+1. Hubungkan personal repos ke Koneksi OS
+2. AI memahami semua proyek Andi
+3. Andi bisa kerja untuk beberapa yayasan/org
+4. Setiap yayasan punya workspace terpisah
+5. Andi bisa switch context antar yayasan
+
+AI Andi: "Kamu sedang kerja untuk Panti Sajadah. 
+         Switch ke Yayasan UII? Atau tetap di sini?"
+
+─────────────────────────────────────────────────────────────
+
+SCENARIO: Organization User (Org Account)
+─────────────────────────────────────────────────────────────
+
+Yayasan Sajadah punya:
+- Org GitHub: pantisajadah
+- Repos: pantisajadah/playbook, pantisajadah/donasi, 
+         pantisajadah/pantisajadah.github.io, dll
+- 5 admin, 20 kontributor
+
+Semua anggota:
+1. Login ke Koneksi OS dengan GitHub OAuth
+2. Ter-authentikasi otomatis via GitHub
+3. Mendapat permission sesuai role di GitHub
+4. AI memahami seluruh konteks yayasan
+5. Knowledge base terakumulasi dari semua anggota
+
+AI Yayasan: "Halo Tim! Hari ini ada 3 PR yang perlu 
+            di-review, 2 issues terbuka, dan sprint 
+            deadline 5 hari lagi. Mau saya bantu 
+            prioritas?"
+
+─────────────────────────────────────────────────────────────
+```
 
 ---
 
@@ -532,7 +682,36 @@ Legend:
 ❌ = No access
 ```
 
-#### 4.1.3 Role-Specific AI Behavior
+#### 4.1.3 Maintainer — Peran Kunci di GitHub
+
+Dalam konteks Koneksi OS, **maintainer** adalah peran yang mengelola repositori di GitHub — entah itu personal account atau organization. Maintainer adalah orang yang:
+- Membuat dan mengelola repository (branch protection, secrets, settings)
+- Mengundang collaborator dan menentukan permission
+- Mengelola deploy (GitHub Actions, Pages, Vercel)
+- Menjadi "single source of truth" untuk konfigurasi workspace
+
+**Maintainer dalam Koneksi OS:**
+
+```
+Maintainer Types:
+├── Personal Maintainer
+│   ├── Punya personal GitHub account
+│   ├── Bisa punya repositori sendiri (username/username, username/playbook)
+│   ├── Bisa punya organizational account
+│   ├── Bisa menghubungkan konteks dari personal repos ke AI
+│   └── Bisa mengundang orang lain ke workspace yang sama
+│
+└── Org Maintainer
+    ├── Punya organization GitHub account (org/org-name)
+    ├── Mengelola repositori organisasi (org/playbook, org/project)
+    ├── Mengelola member dan permission
+    ├── Bisa menghubungkan konteks dari org repos ke AI
+    └── Bisa mengundang collaborator dari luar organisasi
+```
+
+Kunci insight: **Satu orang bisa jadi maintainer untuk personal account SEKALIGUS org account** — dan Koneksi OS bisa mengelola keduanya dalam satu dashboard.
+
+#### 4.1.4 Role-Specific AI Behavior
 
 ```typescript
 interface RoleAIConfig {
@@ -2344,7 +2523,76 @@ UVP: Unique Value Proposition
 
 ---
 
-## 16. Appendix B: Reference Documents
+## 16. Appendix A: Original Prompt Brainstorming
+
+> Prompt asli yang memicu brainstorming ini. Dicatat sebagai referensi agar konteks awal tidak hilang.
+
+```
+silahkan pelajari project vision milik koneksi di 
+~/projects/koneksi/vision/digital-workspace-ecosystem 
+lalu diskusikan dengan saya. sy ingin membahas dengan 
+lebih luas bagaimana jika koneksi membahas ke 
+arah ini.
+
+saya mencita citakan bahwa suatu hari koneksi dapat 
+menciptakan OS yang keren yang dapat memanfaatkan 
+agentic AI, bayangkan sebuah kantor/yayasan/tim 
+bekerja dengan knowledge base yang sama berbasis 
+github, dan di os tersebut pengguna dapat menghubungkan 
+konteks perusahaan atau tim mereka dari github menggunakan 
+akun personal/org github mereka di berbagai platform. 
+
+ini seperti computer on manus or codex atau semacamnya, 
+yang dapat bekerja secara cloud namun benar benar dapat 
+berbagi konteks, dapat dikembangkan dan dikelola oleh 
+maintainer github personal/kantor tersebut, dengan os 
+ini dapat memungkinkan siapapun yang terlibat dalam 
+suatu konteks (yang telah di atur oleh pengelola 
+baik secara RBAC/ABAC dan apapun itu) untuk dapat 
+dihubungkan ke gemini, chatgpt, manus, claude atau 
+apapun ai web service mereka tanpa kehilangan konteks 
+apapun tentang workspace dimana mereka bekerja bahkan 
+sedetail sampai pada role dan assignment (yang 
+terintegrasi trello) yang ditugaskan pada mereka.
+
+bayangkan jika case nya adalah agensi digital, atau 
+software house, yayasan, atau kantor dimana ada 
+banyak sekali tim dengan macam-macam keahlian yang 
+berbeda bahkan sedetail mulai dari Business Analyst 
+sampai A/B Tester atau apapun itu.
+
+bagaimana menurutmu? mari kita diskusikan.
+```
+
+---
+
+## 17. Appendix B: Pernyataan Penutup
+
+> Pernyataan visi ini ditulis setelah brainstorming selesai — sebagai komitmen dan pengingat.
+
+```
+silahkan dokumentasikan semua brainstorming tersebut 
+dulu supaya bisa saya baca sepanjang waktu, supaya 
+bisa saya semakin dalami untuk penerapan judgement 
+yang semakin robust dan solid, hingga benar benar 
+semuanya dapat terealisasi dengan bertahap tanpa 
+ada informasi apapun yang tereduksi dan jangan sampai 
+ada informasi apapun yang hilang, syukur syukur semakin 
+di sempurnakan semakin di lengkapi tapi jangan sampai 
+halu.
+
+saya ingin ini bisa menjadi sebuah realisasi nyata.
+```
+
+**Makna di balik pernyataan ini:**
+1. **"tanpa ada informasi yang tereduksi"** — Dokumentasi harus lengkap, tidak boleh ada yang hilang
+2. **"semakin di sempurnakan semakin di lengkapi"** — Living document, terus di-update
+3. **"tapi jangan sampai halu"** — Tetap grounded, realistis, dan implementable
+4. **"saya ingin ini bisa menjadi realisasi nyata"** — Bukan sekadar teori, tapi benar-benar dibangun
+
+---
+
+## 18. Appendix C: Reference Documents
 
 ```
 Internal References:
@@ -2380,6 +2628,6 @@ External References:
 **Last Updated:** Juli 2026
 **Author:** Sandikodev (KonXC)
 **Status:** Living Document — terus di-update
-**Version:** 1.0.0
+**Version:** 1.1.0
 
 > "We don't just build software. We build **operating systems** that build **exceptional software** — with AI as our partner, not our tool."
